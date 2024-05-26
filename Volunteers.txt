@@ -1,6 +1,0 @@
-Volunteer_ID,First_Name,Last_Name,Address,Phone_Number,Email,Role_ID,VolunteerRole,Status
-1,John,Doe,123 Elm St,5551234567,john.doe@example.com,101,Coordinator,Active
-2,Jane,Smith,456 Oak St,5559876543,jane.smith@example.com,102,Assistant,Active
-3,Emily,Jones,789 Pine St,5556543210,emily.jones@example.com,103,Volunteer,Inactive
-4,Michael,Brown,321 Maple St,5554321098,michael.brown@example.com,104,Supervisor,Active
-5,Jessica,Davis,654 Cedar St,5553456789,jessica.davis@example.com,105,Volunteer,Inactive
