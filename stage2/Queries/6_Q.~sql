@@ -1,0 +1,6 @@
+SELECT 
+    *
+FROM 
+    Reports
+ORDER BY 
+    Report_Type ASC;

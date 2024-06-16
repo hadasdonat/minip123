@@ -1,0 +1,29 @@
+ALTER TABLE Volunteers
+ADD CONSTRAINT pk_Volunteer_ID PRIMARY KEY (Volunteer_ID);
+
+ALTER TABLE Volunteers
+ADD CONSTRAINT unique_Email UNIQUE (Email);
+
+ALTER TABLE Volunteers
+ADD CONSTRAINT fk_Role_ID FOREIGN KEY (Role_ID) REFERENCES Rooles(Role_ID);
+
+ALTER TABLE Volunteers
+MODIFY Email VARCHAR(255) NOT NULL;
+
+
+
+
+ALTER TABLE Rooles
+ADD CONSTRAINT pk_Role_ID PRIMARY KEY (Role_ID);
+
+
+
+ALTER TABLE Activities
+ADD CONSTRAINT pk_Activity_ID PRIMARY KEY (Activity_ID);
+
+
+ALTER TABLE Shifts
+ADD CONSTRAINT pk_Shift_ID PRIMARY KEY (Shift_ID);
+
+ALTER TABLE Shifts
+ADD CONSTRAINT fk_Event_ID FOREIGN KEY (Event_ID) REFERENCES Eevents(Event_ID);
