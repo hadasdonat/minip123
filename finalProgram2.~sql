@@ -1,0 +1,25 @@
+BEGIN
+    DECLARE
+        v_status VARCHAR2(20);
+    BEGIN
+        BEGIN
+            v_status := IsVolunteerActive(10000000);
+            DBMS_OUTPUT.PUT_LINE('Volunteer Status: ' || v_status);
+        EXCEPTION
+            WHEN NO_DATA_FOUND THEN
+                DBMS_OUTPUT.PUT_LINE('Volunteer not found.');
+            WHEN OTHERS THEN
+                DBMS_OUTPUT.PUT_LINE('Error while checking volunteer status: ' || SQLERRM);
+        END;
+
+        BEGIN
+            UpdateVolunteerStatus(10000000, 'Active');
+            DBMS_OUTPUT.PUT_LINE('Volunteer status updated to Active.');
+        EXCEPTION
+            WHEN NO_DATA_FOUND THEN
+                DBMS_OUTPUT.PUT_LINE('Volunteer not found, cannot update status.');
+            WHEN OTHERS THEN
+                DBMS_OUTPUT.PUT_LINE('Error while updating volunteer status: ' || SQLERRM);
+        END;
+    END;
+END;
