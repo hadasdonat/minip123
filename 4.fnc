@@ -14,8 +14,7 @@ EXCEPTION
     WHEN NO_DATA_FOUND THEN
         RETURN 0;
     WHEN OTHERS THEN
-      --exeption--
         DBMS_OUTPUT.PUT_LINE('שגיאה בקבלת מספר המתנדבים לתפקיד: ' || SQLERRM);
         RETURN -1;
-END
+END GetVolunteerRoleCount
 /
